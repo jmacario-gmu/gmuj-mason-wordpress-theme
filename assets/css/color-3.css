@@ -1,0 +1,13 @@
+header .main-header .main-navigation:before {
+    content: '';
+    position: absolute;
+    left: -40px; top: 0; bottom: 0;
+    right: calc(655px - 50vw);
+    box-shadow: 25px 37px 29px 0px rgba(0,0,0,0.2);
+    background: #484685;
+    -moz-transform: skew(-30deg, 0deg);
+    -webkit-transform: skew(-30deg, 0deg);
+    -o-transform: skew(-30deg, 0deg);
+    -ms-transform: skew(-30deg, 0deg);
+    transform: skew(-30deg, 0deg);
+}

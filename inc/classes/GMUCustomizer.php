@@ -111,6 +111,90 @@ function gmuj_theme_customizer_register($wp_customize) {
   $wp_customize->get_setting('blogname')->transport='postMessage';
   $wp_customize->get_setting('blogdescription')->transport='postMessage';
 
+  // Setting: gmuj_mason_unit
+    // Setting
+      $wp_customize->add_setting('gmuj_mason_unit',
+        array(
+          'default' => ''
+        ) 
+      );
+    // Control
+      $wp_customize->add_control(
+        new WP_Customize_Control(
+          $wp_customize,
+          'gmuj_mason_unit',
+          array(
+            'label'      => 'Mason Unit',
+            'section'    => 'title_tagline',
+            'settings'   => 'gmuj_mason_unit'
+          )
+        )
+      );
+
+  // Setting: gmuj_mason_unit_url
+    // Setting
+      $wp_customize->add_setting('gmuj_mason_unit_url',
+        array(
+          'default' => '',
+          'sanitize_callback' => 'esc_url'
+        ) 
+      );
+    // Control
+      $wp_customize->add_control(
+        new WP_Customize_Control(
+          $wp_customize,
+          'gmuj_mason_unit_url',
+          array(
+            'type'       => 'url',
+            'label'      => 'Mason Unit URL',
+            'section'    => 'title_tagline',
+            'settings'   => 'gmuj_mason_unit_url'
+          )
+        )
+      );
+
+  // Setting: gmuj_mason_department
+    // Setting
+      $wp_customize->add_setting('gmuj_mason_department',
+        array(
+          'default' => ''
+        ) 
+      );
+    // Control
+      $wp_customize->add_control(
+        new WP_Customize_Control(
+          $wp_customize,
+          'gmuj_mason_department',
+          array(
+            'label'      => 'Mason Department',
+            'section'    => 'title_tagline',
+            'settings'   => 'gmuj_mason_department'
+          )
+        )
+      );
+
+  // Setting: gmuj_mason_department_url
+    // Setting
+      $wp_customize->add_setting('gmuj_mason_department_url',
+        array(
+          'default' => '',
+          'sanitize_callback' => 'esc_url'
+        ) 
+      );
+    // Control
+      $wp_customize->add_control(
+        new WP_Customize_Control(
+          $wp_customize,
+          'gmuj_mason_department_url',
+          array(
+            'type'       => 'url',
+            'label'      => 'Mason Department URL',
+            'section'    => 'title_tagline',
+            'settings'   => 'gmuj_mason_department_url'
+          )
+        )
+      );
+      
   // Setting: site logo
     // Setting
       $wp_customize->add_setting('site_logo',
@@ -292,51 +376,13 @@ function gmuj_theme_customizer_register($wp_customize) {
        ) 
     );
 
-  // Setting: gmuj_mason_unit
-    // Setting
-      $wp_customize->add_setting('gmuj_mason_unit',
-        array(
-          'default' => ''
-        ) 
-      );
-    // Control
-      $wp_customize->add_control(
-        new WP_Customize_Control(
-          $wp_customize,
-          'gmuj_mason_unit',
-          array(
-            'label'      => 'Mason Unit',
-            'section'    => 'analytics_meta',
-            'settings'   => 'gmuj_mason_unit'
-          )
-        )
-      );
-
-  // Setting: gmuj_mason_department
-    // Setting
-      $wp_customize->add_setting('gmuj_mason_department',
-        array(
-          'default' => ''
-        ) 
-      );
-    // Control
-      $wp_customize->add_control(
-        new WP_Customize_Control(
-          $wp_customize,
-          'gmuj_mason_department',
-          array(
-            'label'      => 'Mason Department',
-            'section'    => 'analytics_meta',
-            'settings'   => 'gmuj_mason_department'
-          )
-        )
-      );
-
   // Setting: gmuj_website_contact
     // Setting
       $wp_customize->add_setting('gmuj_website_contact',
         array(
-          'default' => ''
+          'default' => '',
+          'sanitize_callback' => 'sanitize_email'
+          //'validate_callback' => 'is_email'
         ) 
       );
     // Control
@@ -345,6 +391,7 @@ function gmuj_theme_customizer_register($wp_customize) {
           $wp_customize,
           'gmuj_website_contact',
           array(
+            'type'       => 'email',
             'label'      => 'Website Technical Contact (email)',
             'section'    => 'analytics_meta',
             'settings'   => 'gmuj_website_contact'

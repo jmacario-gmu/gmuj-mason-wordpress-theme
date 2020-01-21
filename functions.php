@@ -65,6 +65,27 @@ unset($customizer);
       //wp_enqueue_style( 'fonts', '//fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,400i,500,700' );
     }
 
+
+// Custom dashboard widgets
+
+// Add dashboard theme info widgets
+  add_action('wp_dashboard_setup', 'gmuj_custom_dashboard_widgets');
+    
+  function gmuj_custom_dashboard_widgets() {
+    global $wp_meta_boxes;
+     
+    wp_add_dashboard_widget('gmuj_custom_dashboard_widget_help', 'Mason WordPress Theme Support', 'gmuj_custom_dashboard_widget_help');
+  }
+   
+  function gmuj_custom_dashboard_widget_help() {
+    echo '<p>Welcome to the Mason WordPress Theme!</p>';
+    echo '<p>Need help? Contact the Mason webmaster team at <a href="mailto:webmaster@gmu.edu">webmaster@gmu.edu</a>.</p>';
+  }
+
+// End custom dashboard widgets
+
+
+
 // Fix admin dashboard footer
   add_filter('admin_footer_text', 'gmuj_replace_footer_admin');
   function gmuj_replace_footer_admin() {

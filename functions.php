@@ -132,25 +132,6 @@ if(!function_exists(p)){
     }
 }
 
-// Email Stuff
-
-function wpb_sender_email( $from_email ) {
-    if(ot_get_option('email_from_email'))
-        return ot_get_option('email_from_email');
-    return $from_email;
-}
-add_filter( 'wp_mail_from', 'wpb_sender_email' );
-
-// Function to change sender name
-function wpb_sender_name( $from_name ) {
-    if(ot_get_option('email_from_name'))
-        return ot_get_option('email_from_name');
-    return $from_name;
-}
-add_filter( 'wp_mail_from_name', 'wpb_sender_name' );
-
-// End email stuff
-
 if ( function_exists( 'add_image_size' ) ) {
     add_image_size( 'gmu-icon',50,50, true );
 }

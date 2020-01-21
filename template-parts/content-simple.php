@@ -1,5 +1,4 @@
 <?php
-$help_text  = ot_get_option('help_text');
 $s = array('am','pm');
 $r = array('a.m.','p.m.');
 ?><article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

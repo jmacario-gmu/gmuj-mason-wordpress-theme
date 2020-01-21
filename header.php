@@ -107,7 +107,18 @@ if(session_id() == '')
             <!-- Top prominent items above menu -->
             <div class="top-header">
 
-                <!-- Prominent links -->
+                <!-- Unit and department -->
+                <div id="mason-unit-and-department">
+                    <ul class="links">
+                        <li>
+                            <a href="<?php echo get_theme_mod('gmuj_mason_unit_url')?>"><?php echo get_theme_mod('gmuj_mason_unit')?></a>
+                        </li>
+                        <li>
+                            <a href="<?php echo get_theme_mod('gmuj_mason_department_url')?>"><?php echo get_theme_mod('gmuj_mason_department')?></a>
+                        </li>
+                    </ul>
+                </div>
+
                 <ul class="links">
                     <li>
                         <a href="/">Prominent Link</a>
@@ -147,7 +158,17 @@ if(session_id() == '')
                 <div class="top-header">
                     <div class="container wide clearfix">
                         <div class="left-side">
-
+                            <!-- Unit and department -->
+                            <div id="mason-unit-and-department">
+                                <ul class="links">
+                                    <li>
+                                        <a href="<?php echo get_theme_mod('gmuj_mason_unit_url')?>"><?php echo get_theme_mod('gmuj_mason_unit')?></a>
+                                    </li>
+                                    <li>
+                                        <a href="<?php echo get_theme_mod('gmuj_mason_department_url')?>"><?php echo get_theme_mod('gmuj_mason_department')?></a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="right-side">
 

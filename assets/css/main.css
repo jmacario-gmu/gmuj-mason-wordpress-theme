@@ -173,6 +173,30 @@ input, textarea, button {
             header .top-header .left-side {
                 float: left;
             }
+            header .top-header .left-side div#mason-unit-and-department ul.links li{
+                margin:0;
+                margin-right:1em;
+            }
+            header .top-header .left-side div#mason-unit-and-department ul.links li#unit,
+            header .top-header .left-side div#mason-unit-and-department ul.links li#department {
+                background: linear-gradient(to right, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 100%);
+                padding-left:1.5em;
+                padding-right:1em;
+                -webkit-transform: skewX(-10deg);
+                -moz-transform: skewX(-10deg);
+                -ms-transform: skewX(-10deg);
+                -o-transform: skewX(-10deg);
+                transform: skewX(-10deg);
+            }
+            header .top-header .left-side div#mason-unit-and-department ul.links li#unit a,
+            header .top-header .left-side div#mason-unit-and-department ul.links li#department a {
+                -webkit-transform: skewX(10deg);
+                -moz-transform: skewX(10deg);
+                -ms-transform: skewX(10deg);
+                -o-transform: skewX(10deg);
+                transform: skewX(10deg);
+            }
+
         }
 /* End Top Link Bar */
 

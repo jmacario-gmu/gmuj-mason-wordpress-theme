@@ -161,10 +161,12 @@ if(session_id() == '')
                             <!-- Unit and department -->
                             <div id="mason-unit-and-department">
                                 <ul class="links">
-                                    <li>
+                                    <li id="university">
+                                        <a href="https://www2.gmu.edu"><span class="fa fa-chevron-circle-left"></span> George Mason University</a></li>
+                                    <li id="unit">
                                         <a href="<?php echo get_theme_mod('gmuj_mason_unit_url')?>"><?php echo get_theme_mod('gmuj_mason_unit')?></a>
                                     </li>
-                                    <li>
+                                    <li id="department">
                                         <a href="<?php echo get_theme_mod('gmuj_mason_department_url')?>"><?php echo get_theme_mod('gmuj_mason_department')?></a>
                                     </li>
                                 </ul>

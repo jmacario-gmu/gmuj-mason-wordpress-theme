@@ -1,13 +1,17 @@
-header .main-header .main-navigation:before {
-    content: '';
-    position: absolute;
-    left: -40px; top: 0; bottom: 0;
-    right: calc(655px - 50vw);
-    box-shadow: 25px 37px 29px 0px rgba(0,0,0,0.2);
-    background: #d47137;
-    -moz-transform: skew(-30deg, 0deg);
-    -webkit-transform: skew(-30deg, 0deg);
-    -o-transform: skew(-30deg, 0deg);
-    -ms-transform: skew(-30deg, 0deg);
-    transform: skew(-30deg, 0deg);
-}
+/* Menu bar color */
+    /* Desktop */
+        header .main-header .main-navigation:before {
+            background: #d47137;
+        }
+    /* Mobile */
+        @media screen and (max-width:1200px)
+        {
+            #mobile-nav{background:#d47137;}
+            .mobile-sidenav-open header .main-header .main-navigation{background:#d47137;}
+            .mobile-sidenav-open .dropdown-item{color:#d47137;}
+        }
+
+/* Menu bar highlight color */
+    header .main-header .main-navigation .navbar-nav li:after {
+        background: #006633;
+    }

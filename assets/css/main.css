@@ -652,7 +652,7 @@ main#content .container {
     cursor: pointer;
 }
 #content .banner-section .search-heading .search-form-wrapper .submit-wrap {
-    background: #15567d;
+    /*background: #15567d;*/
     position: absolute;
     top: 0; bottom: 0; right: -20px;
     padding: 25px 10px;
@@ -669,7 +669,7 @@ main#content .container {
     -ms-transform: skew(30deg, 0deg);
     transform: skew(30deg, 0deg);
     border: none;
-    background: url('../img/search-icon.png') no-repeat center bottom;
+    background: url('../img/search-icon.png') no-repeat center top;
     height: 24px;
     outline: none !important;
     text-align: left;

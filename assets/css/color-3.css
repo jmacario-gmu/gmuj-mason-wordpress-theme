@@ -15,3 +15,8 @@
     header .main-header .main-navigation .navbar-nav li:after {
         background: #006633;
     }
+
+/* Banner search button background color */
+    #content .banner-section .search-heading .search-form-wrapper .submit-wrap {
+        background: #484685;
+    }

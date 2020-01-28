@@ -2032,8 +2032,8 @@ a.btn-read-on{color:#fff;}
         left: 10px; right: 10px;
     }
     .site-footer .section {
-        padding-top: 80px;
-        padding-bottom: 80px;
+        /*padding-top: 80px;*/
+        /*padding-bottom: 80px;*/
     }
 }
 @media screen and (max-width:1200px)

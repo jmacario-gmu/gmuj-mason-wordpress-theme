@@ -251,6 +251,71 @@ function gmuj_theme_customizer_register($wp_customize) {
        ) 
     );
 
+  // Setting: gmuj_prominent_link_text
+    // Setting
+      $wp_customize->add_setting('gmuj_prominent_link_text',
+        array(
+          'default' => ''
+        ) 
+      );
+    // Control
+      $wp_customize->add_control(
+        new WP_Customize_Control(
+          $wp_customize,
+          'gmuj_prominent_link_text',
+          array(
+            'label'      => 'Prominent Link Text',
+            'section'    => 'header_area',
+            'settings'   => 'gmuj_prominent_link_text'
+          )
+        )
+      );
+
+  // Setting: gmuj_prominent_link_url
+    // Setting
+      $wp_customize->add_setting('gmuj_prominent_link_url',
+        array(
+          'default' => '',
+          'sanitize_callback' => 'esc_url'
+        ) 
+      );
+    // Control
+      $wp_customize->add_control(
+        new WP_Customize_Control(
+          $wp_customize,
+          'gmuj_prominent_link_url',
+          array(
+            'type'       => 'url',
+            'label'      => 'Prominent Link URL',
+            'section'    => 'header_area',
+            'settings'   => 'gmuj_prominent_link_url'
+          )
+        )
+      );
+
+    // Setting: gmuj_prominent_link_new_tab
+      // Setting
+        $wp_customize->add_setting(
+          'gmuj_prominent_link_new_tab',
+          array(
+            'default'     => '1'
+          )
+        );
+      // Control
+        $wp_customize->add_control(
+                'gmuj_prominent_link_new_tab',
+                array(
+                    'label'      => 'Open Prominent Link in New Tab?:',
+                    'section'    => 'header_area',
+                    'settings'   => 'gmuj_prominent_link_new_tab',
+                    'type'       => 'radio',
+                    'choices' => array(
+                      '1' => 'Yes',
+                      '0' => 'No'
+                    )
+                )
+        );
+
     // Setting: show utility menu (gmuj_show_utility_menu)
       // Setting
         $wp_customize->add_setting(

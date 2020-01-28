@@ -119,11 +119,16 @@ if(session_id() == '')
                     </ul>
                 </div>
 
-                <ul class="links">
-                    <li>
-                        <a href="/">Prominent Link</a>
-                    </li>
-                </ul>
+                <!-- Prominent link -->
+                <?php if (get_theme_mod('gmuj_prominent_link_text') && get_theme_mod('gmuj_prominent_link_url')) { ?>
+
+                    <ul class="links">
+                        <li>
+                            <a href="<?php echo get_theme_mod('gmuj_prominent_link_url')?>" <?php if (get_theme_mod('gmuj_prominent_link_new_tab')=='1') {echo "target='_blank'";}?>><?php echo get_theme_mod('gmuj_prominent_link_text')?></a>
+                        </li>
+                    </ul>
+
+                <?php } ?>
 
                 <!-- Search -->
                 <div class="search-wrap">
@@ -174,12 +179,16 @@ if(session_id() == '')
                         </div>
                         <div class="right-side">
 
-                            <!-- Prominent links-->
-                            <ul class="links">
-                                <li>
-                                    <a href="/">Prominent Link</a>
-                                </li>
-                            </ul>
+                            <!-- Prominent link-->
+                            <?php if (get_theme_mod('gmuj_prominent_link_text') && get_theme_mod('gmuj_prominent_link_url')) { ?>
+
+                                <ul class="links">
+                                    <li>
+                                        <a href="<?php echo get_theme_mod('gmuj_prominent_link_url')?>" <?php if (get_theme_mod('gmuj_prominent_link_new_tab')=='1') {echo "target='_blank'";}?>><?php echo get_theme_mod('gmuj_prominent_link_text')?></a>
+                                    </li>
+                                </ul>
+
+                            <?php } ?>
 
                             <!-- Search -->
                             <div class="search-wrap">

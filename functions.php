@@ -68,7 +68,7 @@ unset($customizer);
 
 // Custom dashboard widgets
 
-// Add dashboard theme info widgets
+  // Add custom dashboard widgets
   add_action('wp_dashboard_setup', 'gmuj_custom_dashboard_widgets');
     
   function gmuj_custom_dashboard_widgets() {
@@ -76,23 +76,37 @@ unset($customizer);
 
     global $wp_meta_boxes;
     
-    /* Add WordPress dashboard theme support widget */
-    wp_add_dashboard_widget('gmuj_custom_dashboard_widget_theme_support', 'Mason WordPress Theme Support', 'gmuj_custom_dashboard_widget_help');
+    /* Add WordPress dashboard 'theme support' widget */
+    wp_add_dashboard_widget('gmuj_custom_dashboard_widget_theme_support', 'Mason WordPress Theme Support', 'gmuj_custom_dashboard_widget_theme_support');
+
+    /* Add WordPress dashboard 'Mason resources' widget */
+    wp_add_dashboard_widget('gmuj_custom_dashboard_widget_mason_resources', 'Mason Resources', 'gmuj_custom_dashboard_widget_mason_resources');
 
   }
   
-  /* WordPress dashboard widget: theme support: content */
+  /* WordPress dashboard widget content: theme support */
   function gmuj_custom_dashboard_widget_theme_support() {
     echo '<p>Welcome to the Mason WordPress Theme!</p>';
     echo '<p>Need help? Contact the Mason webmaster team at <a href="mailto:webmaster@gmu.edu">webmaster@gmu.edu</a>.</p>';
   }
 
+  /* WordPress dashboard widget content: Mason resources */
+  function gmuj_custom_dashboard_widget_mason_resources() {
+    echo '<ul>';
+    echo '<li><a href="https://brand.gmu.edu/" target="_blank">Mason Brand Profile</a></li>';
+    echo '<li><a href="https://brand.gmu.edu/visual-identity-and-style/color/" target="_blank">Mason Colors</a></li>';
+    echo '<li><a href="https://webinfo.gmu.edu/" target="_blank">Mason Web Standards</a></li>';
+    echo '<li><a href="https://webdev.gmu.edu/" target="_blank">Mason Web Development</a></li>';
+    echo '</ul>';
+  }
+
 // End custom dashboard widgets
 
 
+// Customize admin dashboard footer
 
-// Fix admin dashboard footer
   add_filter('admin_footer_text', 'gmuj_replace_footer_admin');
+
   function gmuj_replace_footer_admin() {
     echo 'Designed by: George Mason University - Information Technology Services - Web Applications and Services</p>';
   }

@@ -87,7 +87,9 @@ unset($customizer);
   /* WordPress dashboard widget content: theme support */
   function gmuj_custom_dashboard_widget_theme_support() {
     echo '<p>Welcome to the Mason WordPress Theme!</p>';
-    echo '<p>Need help? Contact the Mason webmaster team at <a href="mailto:webmaster@gmu.edu">webmaster@gmu.edu</a>.</p>';
+    echo '<p>Need help?</p>';
+    echo '<p>For general inquiries, contact the Mason webmaster team at <a href="mailto:webmaster@gmu.edu">webmaster@gmu.edu</a>.</p>';
+    echo '<p>For more in-depth questions or requests, please <a href="https://gmu.teamdynamix.com/TDClient/33/Portal/Requests/TicketRequests/NewForm?ID=HyCYnjyvSqI_" target="_blank">submit a ticket to the webmaster team</a>.</p>';
   }
 
   /* WordPress dashboard widget content: Mason resources */

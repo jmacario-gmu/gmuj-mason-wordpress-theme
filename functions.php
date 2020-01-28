@@ -72,12 +72,17 @@ unset($customizer);
   add_action('wp_dashboard_setup', 'gmuj_custom_dashboard_widgets');
     
   function gmuj_custom_dashboard_widgets() {
+    /* Adds custom WordPress dashboard widgets */
+
     global $wp_meta_boxes;
-     
-    wp_add_dashboard_widget('gmuj_custom_dashboard_widget_help', 'Mason WordPress Theme Support', 'gmuj_custom_dashboard_widget_help');
+    
+    /* Add WordPress dashboard theme support widget */
+    wp_add_dashboard_widget('gmuj_custom_dashboard_widget_theme_support', 'Mason WordPress Theme Support', 'gmuj_custom_dashboard_widget_help');
+
   }
-   
-  function gmuj_custom_dashboard_widget_help() {
+  
+  /* WordPress dashboard widget: theme support: content */
+  function gmuj_custom_dashboard_widget_theme_support() {
     echo '<p>Welcome to the Mason WordPress Theme!</p>';
     echo '<p>Need help? Contact the Mason webmaster team at <a href="mailto:webmaster@gmu.edu">webmaster@gmu.edu</a>.</p>';
   }

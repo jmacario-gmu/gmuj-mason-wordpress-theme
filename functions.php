@@ -97,7 +97,7 @@ unset($customizer);
       echo "</table>";
   }
 
-  /* WordPress dashboard widget content: theme support */
+  /* WordPress dashboard meta box content: theme support */
   function gmuj_custom_dashboard_meta_box_theme_support() {
     echo '<p>Welcome to the Mason WordPress Theme!</p>';
     echo '<p>Need help?</p>';
@@ -114,8 +114,6 @@ unset($customizer);
     echo '<li><a href="https://webdev.gmu.edu/" target="_blank">Mason Web Development</a></li>';
     echo '</ul>';
   }
-
-
 
 // End custom dashboard content
 

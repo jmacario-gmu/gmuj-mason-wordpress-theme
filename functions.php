@@ -66,13 +66,14 @@ unset($customizer);
     }
 
 
-// Custom dashboard widgets
+// Custom dashboard content
 
-  // Add custom dashboard widgets
-  add_action('wp_dashboard_setup', 'gmuj_custom_dashboard_widgets');
+  // Add custom dashboard content
+  add_action('wp_dashboard_setup', 'gmuj_custom_dashboard_content');
     
-  function gmuj_custom_dashboard_widgets() {
-    /* Adds custom WordPress dashboard widgets */
+  function gmuj_custom_dashboard_content() {
+    /* Adds custom WordPress dashboard content boxes */
+    /* Dashboard widgets appear in the left column; Dashboard meta boxes appear in the right column. */
 
     global $wp_meta_boxes;
     
@@ -82,8 +83,10 @@ unset($customizer);
     /* Add WordPress dashboard 'Mason resources' widget */
     wp_add_dashboard_widget('gmuj_custom_dashboard_widget_mason_resources', 'Mason Resources', 'gmuj_custom_dashboard_widget_mason_resources');
 
+    /* Add WordPress dashboard 'Mason resources' meta box */
+    add_meta_box("gmuj_custom_dashboard_meta_box_theme_info", "Mason WordPress Theme Info", "gmuj_custom_dashboard_meta_box_theme_info", "dashboard","side");
   }
-  
+
   /* WordPress dashboard widget content: theme support */
   function gmuj_custom_dashboard_widget_theme_support() {
     echo '<p>Welcome to the Mason WordPress Theme!</p>';
@@ -102,7 +105,17 @@ unset($customizer);
     echo '</ul>';
   }
 
-// End custom dashboard widgets
+  /* WordPress dashboard meta box content: theme info */
+  function gmuj_custom_dashboard_meta_box_theme_info()
+  {
+      echo "<p><strong>Recommended Image Sizes</strong></p>";
+      echo "<table>";
+      echo "<tr><th style='text-align:left; vertical-align:top;'>Site Logo</th><td>Recommended Size: 200px wide</td></tr>";
+      echo "<tr><th style='text-align:left; vertical-align:top;'>Banner Image</th><td>Minimum Size: 1000px wide by 270px high<br />Images taller than this minimum size will be centered in desktop view. As the window width shrinks on smaller screens the top and bottom of the image will become visible.</td></tr>";
+      echo "</table>";
+  }
+
+// End custom dashboard content
 
 
 // Customize admin dashboard footer

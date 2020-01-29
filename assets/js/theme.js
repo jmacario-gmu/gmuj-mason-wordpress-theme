@@ -113,36 +113,6 @@
       pauseOnHover: true
     });
 
-    $('.outage-calendar-wrap .days-wrap .day-cell.active .inner').each(function() {
-
-        /*$(this).tooltip({
-            container: '.outage-calendar-wrap',
-            html: true,
-            placement: 'auto',
-            title: function() {
-                return $(this).next('.tooltip').html();
-            }
-        });*/
-
-      $(this).popover({
-        container: '.outage-calendar-wrap',
-        html: true,
-        placement: 'auto',
-        trigger: 'hover click',
-        title:'Maintenance',
-        content: function() {
-          return $(this).next('.tooltip').html();
-        }
-      });
-
-
-    });
-  });
-  /*$('.date_link').click(function(){
-      window.location.href = $(this).data('href');
-      return;
-  })*/
-
    function equalHeight($e) {
         $e.height('auto');
         var $h = 0;

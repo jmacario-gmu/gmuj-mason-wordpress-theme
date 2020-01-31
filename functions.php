@@ -126,9 +126,12 @@ unset($customizer);
     echo 'Designed by: George Mason University - Information Technology Services - Web Applications and Services</p>';
   }
 
+// Enqueue appropriate color stylesheet, depending on the color theme selected in the theme customizer 
+add_action( 'wp_enqueue_scripts', 'enqueue_color_scheme_styles' );
 
+function enqueue_color_scheme_styles(){
 
-// Enqueue appropriate color stylesheet, depending on the color theme selected in the theme customizer
+  // Choose appropriate stylesheet based on the value selected in the theme customizer
   switch(get_theme_mod('gmuj_theme_color')) {
     case 1:
       wp_enqueue_style('gmuj_style_color_1',get_template_directory_uri().'/assets/css/color-1.css');
@@ -143,9 +146,11 @@ unset($customizer);
       wp_enqueue_style('gmuj_style_color_4',get_template_directory_uri().'/assets/css/color-4.css');
       break;
     default:
-      // code block
+      // Default to color scheme 1
+      wp_enqueue_style('gmuj_style_color_1',get_template_directory_uri().'/assets/css/color-1.css');
   } 
 
+}
 
 add_action( 'admin_enqueue_scripts', 'enqueue_date_picker' );
 

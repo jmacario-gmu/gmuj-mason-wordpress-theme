@@ -1,12 +1,16 @@
 <?php
 
 function gmuj_get_featured_image_src($post_id = null, $size = 'full') {
+  
+  // Returns url of the featured image for the provided post ID.
+
   if (has_post_thumbnail( $post_id ) ) {
     $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), $size );
     return $image[0];
   } else {
     return '';
   }
+
 }
 
 function gmu_theme_get_field($field, $post_id = null) {

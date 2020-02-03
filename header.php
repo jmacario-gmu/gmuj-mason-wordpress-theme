@@ -267,12 +267,7 @@ if(session_id() == '')
 
             <main id="content">
 
-                <!-- Banner section - if this is a single post, and this post has a featured image, use it as the banner section background image. -->
-                <div class="banner-section" style="
-                <?php 
-                if (is_singular() && gmu_theme_get_featured_image()) printf('background-image: url(\'%1$s\')', gmuj_get_featured_image_src()); 
-                ?>
-                ">
+                <div class="banner-section">
                     
                     <div class="container">
                         <?php if (is_search() || is_front_page() || is_home() ||is_page_template('templates/homepage.php')): ?>

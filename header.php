@@ -267,9 +267,10 @@ if(session_id() == '')
 
             <main id="content">
 
+                <!-- Banner section - if this is a single post, and this post has a featured image, use it as the banner section background image. -->
                 <div class="banner-section" style="
                 <?php 
-                if (is_singular() && !is_singular('member') && gmu_theme_get_featured_image()) printf('background-image: url(\'%1$s\')', gmu_theme_get_featured_image()); 
+                if (is_singular() && gmu_theme_get_featured_image()) printf('background-image: url(\'%1$s\')', gmuj_get_featured_image_src()); 
                 ?>
                 ">
                     
@@ -316,9 +317,3 @@ if(session_id() == '')
 
                 <div class="container page-container <?php echo gmu_theme_get_field('navigation_side_style') ? 'wide' : '' ?>">
                     <div class="site-content clearfix">
-
-                        <?php if (!is_page_template('templates/alerts.php') && (is_singular() || is_archive('bulletin'))): ?>
-                            <div class="breadcrumb-wrapper">
-                                <?php gmu_theme_breadcrumb() ?>
-                            </div>
-                        <?php endif ?>

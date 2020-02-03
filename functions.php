@@ -23,9 +23,11 @@ if (!isset($bootstrapbasic4_title_separator)) {
 }
 
 
-// Require, include files ---------------------------------------------------------------------
+// Include files
 require get_template_directory() . '/inc/classes/Autoload.php';
-require get_template_directory() . '/inc/functions/include-functions.php';
+
+// Include functions
+require get_template_directory() . '/inc/custom-functions.php';
 
 // Setup auto load for load the class files without manually include file by file.
 $Autoload = new \BootstrapBasic4\Autoload();

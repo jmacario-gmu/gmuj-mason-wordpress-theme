@@ -1,0 +1,11 @@
+/* Custom Login Styles */
+
+/* Mason colors */
+body.login {background-image:linear-gradient(to right, #6c9 , #ff9);}
+
+/* Mason WordPress theme logo in place of WordPress logo */
+body.login div#login h1 a {background-image: url('/wp-content/themes/gmuj-gmuwptheme/assets/img/logoMasonWordPressTheme.png');}
+
+/* Other modifications */
+div#login {text-align:center;}
+body.login div#login form#loginform { border-radius: 10px; }

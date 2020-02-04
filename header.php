@@ -294,7 +294,7 @@ if(session_id() == '')
                                             <h1><?php echo get_theme_mod('search_heading') ?></h1>
                                             <div class="description"><?php echo wpautop(get_theme_mod('search_description')) ?></div>
                                             <div class="search-form-wrapper">
-                                                <?php get_template_part('template-parts/searchform', 'custom'); ?>
+                                                <?php get_template_part('template-parts/content', 'search-form'); ?>
                                             </div>
                                         </div>
                                         <?php

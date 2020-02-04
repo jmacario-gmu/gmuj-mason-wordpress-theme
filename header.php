@@ -76,7 +76,7 @@ if(session_id() == '')
                         <td><?php echo get_theme_mod('gmuj_mason_unit') ?></td>
                     </tr>
                     <tr>
-                        <td>Mason Departmentt:</td>
+                        <td>Mason Department:</td>
                         <td><?php echo get_theme_mod('gmuj_mason_department') ?></td>
                     </tr>
 
@@ -121,16 +121,18 @@ if(session_id() == '')
                     </ul>
                 </div>
 
-                <!-- Prominent link -->
-                <?php if (get_theme_mod('gmuj_prominent_link_text') && get_theme_mod('gmuj_prominent_link_url')) { ?>
-
-                    <ul class="links">
-                        <li>
-                            <a href="<?php echo get_theme_mod('gmuj_prominent_link_url')?>" <?php if (get_theme_mod('gmuj_prominent_link_new_tab')=='1') {echo "target='_blank'";}?>><?php echo get_theme_mod('gmuj_prominent_link_text')?></a>
-                        </li>
-                    </ul>
-
-                <?php } ?>
+                <!-- Prominent Links -->
+                <?php 
+                wp_nav_menu(
+                    array(
+                        'theme_location' => 'prominent',
+                        'container' => false,
+                        'menu_id' => 'prominent-links',
+                        'menu_class' => 'links',
+                        'walker' => new \BootstrapBasic4\BootstrapBasic4WalkerNavMenu()
+                    )
+                );
+                ?>      
 
                 <!-- Search -->
                 <div class="search-wrap">
@@ -181,16 +183,18 @@ if(session_id() == '')
                         </div>
                         <div class="right-side">
 
-                            <!-- Prominent link-->
-                            <?php if (get_theme_mod('gmuj_prominent_link_text') && get_theme_mod('gmuj_prominent_link_url')) { ?>
-
-                                <ul class="links">
-                                    <li>
-                                        <a href="<?php echo get_theme_mod('gmuj_prominent_link_url')?>" <?php if (get_theme_mod('gmuj_prominent_link_new_tab')=='1') {echo "target='_blank'";}?>><?php echo get_theme_mod('gmuj_prominent_link_text')?></a>
-                                    </li>
-                                </ul>
-
-                            <?php } ?>
+                            <!-- Prominent Links -->
+                            <?php 
+                            wp_nav_menu(
+                                array(
+                                    'theme_location' => 'prominent',
+                                    'container' => false,
+                                    'menu_id' => 'prominent-links',
+                                    'menu_class' => 'links',
+                                    'walker' => new \BootstrapBasic4\BootstrapBasic4WalkerNavMenu()
+                                )
+                            );
+                            ?>            
 
                             <!-- Search -->
                             <div class="search-wrap">

@@ -119,6 +119,9 @@ input, textarea, button {
         header .top-header .right-side .links {
             float: left;
         }
+        header .top-header .right-side .links a.nav-link {
+           padding:0 0.75rem;
+        }        
         header .top-header .right-side .search-wrap {
             float: left;
             position: relative;

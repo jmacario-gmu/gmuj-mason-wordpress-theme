@@ -22,6 +22,7 @@
 
             <!--WordPress footer-->
             <?php wp_footer(); ?>
+            <!--End WordPress footer-->
 
         </div><!-- #page -->
 

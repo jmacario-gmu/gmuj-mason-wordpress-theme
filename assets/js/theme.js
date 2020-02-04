@@ -59,19 +59,6 @@
     e.stopPropagation();
     $('body').toggleClass('mobile-sidenav-open');
     $('.fa', this).toggleClass('fa-times fa-bars');
-    //-----------------------------------------------------------------------------------------------------
-    // Integration with WPFront Notification Bar plugin:
-
-    // Code to open/close notification bar (from WPFront Notification Bar) when the mobile 'hamburger' menu is toggled, otherwise the notification bar obscures the menu on mobile view.
-    // The jQuery toggle function toggles the visibility state of an element. 
-    // However, note that in this case, this only has a visible effect when the notification bar starts as open, I think because it's height is set to zero otherwise so it doesn't matter whether we make it visible or not.
-    // This is good because we wouldn't want the menu bar to cause the notifcation bar to toggle open if it started as closed.
-    // Also note that this only has an effect on mobile view, as the hamburger menu icon we are adding our code to is only visible on mobile.
-
-    $('div#wpfront-notification-bar-spacer').toggle();
-
-    // End integration with WPFront Notification Bar plugin
-    //-----------------------------------------------------------------------------------------------------
   });
 
   $(document).on('click', function(e) {

@@ -113,6 +113,8 @@
       pauseOnHover: true
     });
 
+  });
+
    function equalHeight($e) {
         $e.height('auto');
         var $h = 0;

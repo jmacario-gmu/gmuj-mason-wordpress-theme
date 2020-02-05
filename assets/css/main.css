@@ -200,6 +200,101 @@ div.clear {height:1px; clear:both;}
         }
 /* End Top Link Bar */
 
+
+/* Site title */
+
+    header .site-title #site-title-text {
+        display:inline;
+    }
+    header .site-title {
+        float: left;
+        margin-top: 0.5em;
+        padding-left:5px;
+        color:#fff;
+    }
+    header .site-title.image-logo .site-description {
+        display: none;
+    }
+    header .site-title.image-logo .site-title-heading img {
+        /*display: block;*/
+        max-width:250px;
+        vertical-align: baseline;
+        /*margin-left: -8px;*/
+        margin-right:1em;
+    }
+
+    .site-title {
+        margin-bottom: 0;
+        margin-top: 10px;
+    }
+    .site-title > a {
+        text-decoration: none;
+    }
+    .site-title > div {
+        height: auto;
+        line-height: 18px;
+    }
+    .site-title .site-description {
+        color: #999;
+        font-size: 16px;
+    }
+    .site-title .site-title-heading {
+        margin: 0;
+    }
+
+    h1.site-title-heading a:hover {text-decoration:none; color:#396;}
+
+
+    @media screen and (max-width: 767px) {
+        header .site-title {
+            padding-left:0;
+        }
+        header .site-title.image-logo .site-title-heading img{
+            max-width:225px;
+            margin-right:0.5em;
+        }
+
+    }
+
+    @media screen and (max-width: 700px) {
+        header .site-title.image-logo .site-title-heading img{
+            max-width:175px;
+        }
+
+    }
+
+    @media screen and (max-width: 650px) {
+        header .site-title #site-title-text {
+            display:block;
+        }
+
+    }
+
+    @media screen and (max-width: 479px) {
+        header .site-title.image-logo .site-title-heading img{
+            max-width:150px;
+        }
+        header .site-title .site-title-heading #site-title-text{
+            line-height:1em;
+        }
+    }
+
+/* Navigation */
+    @media screen and (max-width: 479px) {
+        header .main-header .main-navigation {
+            position:absolute !important;
+            right:0;
+        }
+    }
+
+/* Banner section */
+    @media screen and (max-width: 479px) {
+        div.banner-section div.container {
+            margin-top:2em;
+        }
+    }
+
+
 /* Calls-to-Action Section */
 
     /* Default (mobile) */
@@ -254,7 +349,7 @@ div.clear {height:1px; clear:both;}
 /* End Calls-to-Action Section */
 
 /* Site title */
-h1.site-title-heading a:hover {text-decoration:none; color:#396;}
+
 
 
 
@@ -306,24 +401,7 @@ h1.site-title-heading a:hover {text-decoration:none; color:#396;}
 
 
 
-.site-title {
-    margin-bottom: 0;
-    margin-top: 10px;
-}
-.site-title > a {
-    text-decoration: none;
-}
-.site-title > div {
-    height: auto;
-    line-height: 18px;
-}
-.site-title .site-description {
-    color: #999;
-    font-size: 16px;
-}
-.site-title .site-title-heading {
-    margin: 0;
-}
+
 
 
 .widget_calendar .calendar_wrap table {
@@ -497,22 +575,7 @@ img {
 
 
 
-header .site-title {
-    float: left;
-    margin-top: 0.5em;
-    padding-left:5px;
-    color:#fff;
-}
-header .site-title.image-logo .site-description {
-    display: none;
-}
-header .site-title.image-logo .site-title-heading img {
-    /*display: block;*/
-    max-width:250px;
-    vertical-align: baseline;
-    /*margin-left: -8px;*/
-    margin-right:1em;
-}
+
 header .main-header {
     /*padding-top: 50px;*/
     padding-bottom: 50px;
@@ -2189,10 +2252,6 @@ a.btn-read-on{color:#fff;}
 }
 
 @media screen and (max-width: 767px) {
-    header .site-title {
-        padding-left:0;
-    }
-    header .site-title.image-logo .site-title-heading img{max-width:225px;}
     .site-main {
         float: none;
         width: auto;
@@ -2287,7 +2346,6 @@ a.btn-read-on{color:#fff;}
     footer#site-footer .contact-info{margin-top:20px;}
 }
 @media screen and (max-width: 479px) {
-    header .site-title.image-logo .site-title-heading img{max-width:190px;}
     .filtered-section ul {
         -webkit-column-count: 1;
         -moz-column-count: 1;
@@ -2310,7 +2368,3 @@ a.btn-read-on{color:#fff;}
     .service-category h3 a {width:78%;}
     .filter-bar li a{text-overflow:ellipsis;overflow:hidden;max-height:30px;white-space: nowrap;}
 }
-
-/* Integration with WPFront notification bar */
-div#wpfront-notification-bar-open-button {z-index:10000 !important;}
-/* End integration with WPFront notificaiton bar */

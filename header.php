@@ -220,11 +220,13 @@ if(session_id() == '')
                                     <?php
                                         // If the site includes a logo,
                                             if (get_theme_mod('site_logo')) {
-                                                // Display the logo.
+                                                // Display the logo
                                                     printf('<img src="%1$s" alt="%2$s">', get_theme_mod('site_logo'), get_bloginfo('name'));
                                             }
                                         // Display the site name
-                                            bloginfo('name');
+                                            echo "<div id='site-title-text'>";
+                                            echo bloginfo('name');
+                                            echo "</div>";
                                     ?>
 
                                 </a>

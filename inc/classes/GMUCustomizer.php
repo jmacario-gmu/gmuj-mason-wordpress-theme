@@ -230,7 +230,7 @@ function gmuj_theme_customizer_register($wp_customize) {
               'gmuj_theme_color',
               array(
                   'label'      => 'Theme Color Scheme',
-                  'description' => '<p>Select a pre-defined color scheme consistent with the Mason brand: <a href="https://brand.gmu.edu/visual-identity-and-style/color/">brand.gmu.edu/visual-identity-and-style/color/</a></p><p>Note: this setting will not be reflected in the customizer preview.</p>',
+                  'description' => '<p>Select a pre-defined color scheme consistent with the Mason brand: <a href="https://brand.gmu.edu/visual-identity-and-style/color/">brand.gmu.edu/visual-identity-and-style/color/</a></p>',
                   'section'    => 'colors',
                   'settings'   => 'gmuj_theme_color',
                   'type'       => 'select',

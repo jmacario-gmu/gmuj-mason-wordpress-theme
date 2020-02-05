@@ -155,7 +155,8 @@ if (!class_exists('\\BootstrapBasic4\\BootstrapBasic4')) {
             register_nav_menus(array(
                 'primary' => 'Primary Menu',
                 'utility' => 'Utility Menu',
-                'prominent' => 'Prominent Links Menu'
+                'prominent' => 'Prominent Links Menu',
+                'calls-to-action' => 'Calls-to-Action Menu'
             ));
 
             // add post formats support

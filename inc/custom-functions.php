@@ -1,5 +1,22 @@
 <?php
 
+function gmuj_get_menu_items_count($menu_location_slug) {
+
+  // Returns number of items in call-to-action menu
+
+  // Get array of theme menu locations
+    $menu_locations = get_nav_menu_locations();
+  // Get ID of menu currently used in the 'call-to-actions' menu location
+    $call_to_action_menu_id = $menu_locations[$menu_location_slug];
+  // Get items in relevant menu
+    $menuterm = wp_get_nav_menu_object($call_to_action_menu_id);
+  // Get total count of items in that menu
+    $total_count = ($menuterm instanceof \WP_Term) ? $menuterm->count : 0;
+
+  return $total_count;
+
+}
+
 function gmuj_get_featured_image_src($post_id = null, $size = 'full') {
   
   // Returns url of the featured image for the provided post ID.

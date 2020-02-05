@@ -274,7 +274,7 @@ if(session_id() == '')
                 <div class="banner-section">
                     
                     <div class="container">
-                        <?php if (is_search() || is_front_page() || is_home() ||is_page_template('templates/homepage.php')): ?>
+                        <?php if (is_search() || is_front_page() || is_home() || is_page_template('templates/homepage.php')): ?>
                             <?php 
                                 switch (get_theme_mod('gmuj_homepage_header_mode')) {
                                     case 'image':
@@ -289,14 +289,31 @@ if(session_id() == '')
                                         break;
                                     case 'cta':
                                         ?>
-                                        <h1>Call-to-Action</h1>
+                                        <div id="cta-wrapper">
+                                            <div id="cta-header">
+                                                <h1><?php echo get_theme_mod('cta_header_title') ?></h1>
+                                                <div class="description"><?php echo wpautop(get_theme_mod('cta_header_description')) ?></div>
+                                            </div>
+                                            <?php
+                                            wp_nav_menu(
+                                                array(
+                                                    // 'depth' => '2',
+                                                    'theme_location' => 'calls-to-action',
+                                                    'container' => false,
+                                                    'menu_class' => 'items' . gmuj_get_menu_items_count('calls-to-action'),
+                                                    'walker' => new \BootstrapBasic4\BootstrapBasic4WalkerNavMenu()
+                                                )
+                                            );
+                                            ?>
+                                            <div class="clear"></div>
+                                        </div>
                                         <?php
                                         break;
                                     case 'search':
                                         ?>
-                                        <div class="search-heading">
-                                            <h1><?php echo get_theme_mod('search_heading') ?></h1>
-                                            <div class="description"><?php echo wpautop(get_theme_mod('search_description')) ?></div>
+                                        <div class="search-header">
+                                            <h1><?php echo get_theme_mod('search_header_title') ?></h1>
+                                            <div class="description"><?php echo wpautop(get_theme_mod('search_header_description')) ?></div>
                                             <div class="search-form-wrapper">
                                                 <?php get_template_part('template-parts/content', 'search-form'); ?>
                                             </div>

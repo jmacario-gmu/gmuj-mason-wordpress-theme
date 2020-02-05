@@ -264,6 +264,7 @@ function gmuj_theme_customizer_register($wp_customize) {
                 'gmuj_show_utility_menu',
                 array(
                     'label'      => 'Show Utility Menu?:',
+                    'description' => '<p>The utility menu is intended for the display of links to other university websites to aid in university navigation, and is only displayed on desktop view. It corresponds to the yellow menu bar at the top of the Mason core website (www2.gmu.edu). The links in this menu should correspond to the links on the Mason core website to ensure ease of navigation.</p>',
                     'section'    => 'header_area',
                     'settings'   => 'gmuj_show_utility_menu',
                     'type'       => 'radio',
@@ -273,6 +274,27 @@ function gmuj_theme_customizer_register($wp_customize) {
                     )
                 )
         );
+
+  // Setting: default_header (image)
+    // Setting
+      $wp_customize->add_setting('default_header',
+        array(
+          'default' => ''
+        )
+      );
+
+    // Control
+      $wp_customize->add_control(
+        new WP_Customize_Image_Control(
+          $wp_customize,
+          'default_header',
+          array(
+            'label'      => 'Default Header Image','GMU',
+            'section'    => 'header_area',
+            'settings'   => 'default_header'
+          )
+        )
+      );
 
     // Setting: homepage mode (gmuj_homepage_mode)
       // Setting
@@ -293,45 +315,23 @@ function gmuj_theme_customizer_register($wp_customize) {
                     'choices' => array(
                       'image' => 'Banner Image',
                       'rotator' => 'Rotator',
-                      'cta' => 'Call-to-Action',
+                      'cta' => 'Calls-to-Action',
                       'search' => 'Search'
                     )
                 )
         );
 
-  // Setting: default_header (image)
-    // Setting
-      $wp_customize->add_setting('default_header',
-        array(
-          'default' => ''
-        ) 
-      );
-
-    // Control
-      $wp_customize->add_control(
-        new WP_Customize_Image_Control(
-          $wp_customize,
-          'default_header',
-          array(
-            'label'      => 'Default Header Image','GMU',
-            'section'    => 'header_area',
-            'settings'   => 'default_header'
-          )
-        )
-      );
-
-  
-  // Add section: header_area 
-    $wp_customize->add_section('search_intro_settings', 
+  // Add section: search_header_settings
+    $wp_customize->add_section('search_header_settings',
        array(
-          'title'       => 'Search Form',
+          'title'       => 'Header: Search',
           'priority'    => 150
-       ) 
+       )
     );
 
-  // Setting: search_heading
+  // Setting: search_header_title
     // Setting
-      $wp_customize->add_setting('search_heading',
+      $wp_customize->add_setting('search_header_title',
         array(
           'default' => ''
         ) 
@@ -340,18 +340,66 @@ function gmuj_theme_customizer_register($wp_customize) {
       $wp_customize->add_control(
         new WP_Customize_Control(
           $wp_customize,
-          'search_heading',
+          'search_header_title',
           array(
-            'label'      => 'Header Text',
-            'section'    => 'search_intro_settings',
-            'settings'   => 'search_heading'
+            'label'      => 'Search Header Title',
+            'section'    => 'search_header_settings',
+            'settings'   => 'search_header_title'
           )
         )
       );
 
-  // Setting: search_description
+  // Setting: search_header_description
     // Setting
-      $wp_customize->add_setting('search_description',
+      $wp_customize->add_setting('search_header_description',
+        array(
+          'default' => ''
+        )
+      );
+    // Control
+      $wp_customize->add_control(
+        new Customize_Textarea_Control(
+          $wp_customize,
+          'search_header_description',
+          array(
+            'label'      => 'Search Header Description',
+            'section'    => 'search_header_settings',
+            'settings'   => 'search_header_description'
+          )
+        )
+      );
+
+  // Add section: cta_header_settings
+    $wp_customize->add_section('cta_header_settings',
+       array(
+          'title'       => 'Header: Calls-to-Action',
+          'priority'    => 150
+       )
+    );
+
+  // Setting: cta_header_title
+    // Setting
+      $wp_customize->add_setting('cta_header_title',
+        array(
+          'default' => ''
+        ) 
+      );
+    // Control
+      $wp_customize->add_control(
+        new WP_Customize_Control(
+          $wp_customize,
+          'cta_header_title',
+          array(
+            'label'      => 'Calls-to-Action Header Title',
+            'section'    => 'cta_header_settings',
+            'settings'   => 'cta_header_title'
+          )
+        )
+      );
+
+  // Setting: cta_header_description
+    // Setting
+      $wp_customize->add_setting('cta_header_description',
         array(
           'default' => ''
         ) 
@@ -360,11 +408,11 @@ function gmuj_theme_customizer_register($wp_customize) {
       $wp_customize->add_control(
         new Customize_Textarea_Control(
           $wp_customize,
-          'search_description',
+          'cta_header_description',
           array(
-            'label'      => 'Description',
-            'section'    => 'search_intro_settings',
-            'settings'   => 'search_description'
+            'label'      => 'Calls-to-Action Header Description',
+            'section'    => 'cta_header_settings',
+            'settings'   => 'cta_header_description'
           )
         )
       );

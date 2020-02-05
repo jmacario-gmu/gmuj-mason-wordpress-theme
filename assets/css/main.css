@@ -2368,3 +2368,12 @@ a.btn-read-on{color:#fff;}
     .service-category h3 a {width:78%;}
     .filter-bar li a{text-overflow:ellipsis;overflow:hidden;max-height:30px;white-space: nowrap;}
 }
+
+/*category archives*/
+.archive-entry-summary{ display: flex; align-items: flex-start; }
+.archive-entry-summary .flex-item:nth-of-type(1) { flex-grow: 1; min-width: 200px; padding-right: .5rem; }
+.archive-entry-summary .flex-item:nth-of-type(2) { flex-grow: 2; }
+
+@media screen and (max-width:960px) {
+    .archive-entry-summary{ flex-wrap: wrap; }
+}

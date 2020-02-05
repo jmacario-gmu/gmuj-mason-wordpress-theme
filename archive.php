@@ -1,16 +1,9 @@
-<!-- Main template -->
-
-<!--
-* To override home page (for listing latest post) add home.php into the theme.<br>
-* If front page displays is set to static, the index.php file will be used.<br>
-* If front-page.php exists, it will be override any home page file such as home.php, index.php.<br>
-* To learn more please go to https://developer.wordpress.org/themes/basics/template-hierarchy/ .
--->
+<!-- Archive template -->
 
 <!-- Header -->
 <?php get_header(); ?> 
 
-<!-- Main body -->
+<!-- Archive body -->
 <main id="main" class="col-md-<?php echo \BootstrapBasic4\Bootstrap4Utilities::getMainColumnSize(); ?> site-main" role="main">
     <?php
     // Do we have posts?

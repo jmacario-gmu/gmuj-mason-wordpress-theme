@@ -108,8 +108,8 @@ function gmuj_theme_customizer_register($wp_customize) {
       }
   }
 
-  $wp_customize->get_setting('blogname')->transport='postMessage';
-  $wp_customize->get_setting('blogdescription')->transport='postMessage';
+  // Remove site tagline control
+    $wp_customize->remove_control('blogdescription');
 
   // Setting: gmuj_mason_unit
     // Setting

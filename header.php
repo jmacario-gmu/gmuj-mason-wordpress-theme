@@ -230,14 +230,6 @@ if(session_id() == '')
                                 </a>
                             </h1>
 
-                            <!-- Site description/tagline-->
-                            <!-- This is hidden in main.css by default.-->
-                            <div class="site-description">
-                                <small>
-                                    <?php bloginfo('description'); ?>
-                                </small>
-                            </div>
-
                         </div><!-- .site-title -->
 
                         <div class="main-navigation">

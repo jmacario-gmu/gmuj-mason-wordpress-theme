@@ -1,11 +1,8 @@
 @import 'flexvideo.css';
 
-/* ----- I think we can remove -------- */
-input, textarea, button {
-    -webkit-appearance: none!important;
-    -webkit-border-radius: 0;
-}
-/* ---------------------------- */
+/* General */
+
+div.clear {height:1px; clear:both;}
 
 /* Sidebar */
 
@@ -203,8 +200,156 @@ input, textarea, button {
         }
 /* End Top Link Bar */
 
+
 /* Site title */
-h1.site-title-heading a:hover {text-decoration:none; color:#396;}
+
+    header .site-title #site-title-text {
+        display:inline;
+    }
+    header .site-title {
+        float: left;
+        margin-top: 0.5em;
+        padding-left:5px;
+        color:#fff;
+    }
+    header .site-title.image-logo .site-description {
+        display: none;
+    }
+    header .site-title.image-logo .site-title-heading img {
+        /*display: block;*/
+        max-width:250px;
+        vertical-align: baseline;
+        /*margin-left: -8px;*/
+        margin-right:1em;
+    }
+
+    .site-title {
+        margin-bottom: 0;
+        margin-top: 10px;
+    }
+    .site-title > a {
+        text-decoration: none;
+    }
+    .site-title > div {
+        height: auto;
+        line-height: 18px;
+    }
+    .site-title .site-description {
+        color: #999;
+        font-size: 16px;
+    }
+    .site-title .site-title-heading {
+        margin: 0;
+    }
+
+    h1.site-title-heading a:hover {text-decoration:none; color:#396;}
+
+
+    @media screen and (max-width: 767px) {
+        header .site-title {
+            padding-left:0;
+        }
+        header .site-title.image-logo .site-title-heading img{
+            max-width:225px;
+            margin-right:0.5em;
+        }
+
+    }
+
+    @media screen and (max-width: 700px) {
+        header .site-title.image-logo .site-title-heading img{
+            max-width:175px;
+        }
+
+    }
+
+    @media screen and (max-width: 650px) {
+        header .site-title #site-title-text {
+            display:block;
+        }
+
+    }
+
+    @media screen and (max-width: 479px) {
+        header .site-title.image-logo .site-title-heading img{
+            max-width:150px;
+        }
+        header .site-title .site-title-heading #site-title-text{
+            line-height:1em;
+        }
+    }
+
+/* Navigation */
+    @media screen and (max-width: 479px) {
+        header .main-header .main-navigation {
+            position:absolute !important;
+            right:0;
+        }
+    }
+
+/* Banner section */
+    @media screen and (max-width: 479px) {
+        div.banner-section div.container {
+            margin-top:2em;
+        }
+    }
+
+
+/* Calls-to-Action Section */
+
+    /* Default (mobile) */
+        div.banner-section div.container div#cta-wrapper ul {
+            padding-left:0;
+            list-style-type:none;
+        }
+
+        div.banner-section div.container div#cta-wrapper ul li {
+            width:85%;
+            margin-bottom:0.5em;
+            border-top:4px solid #fff;
+            background-color:#fff;
+            margin-left:auto; margin-right:auto;
+        }
+
+        div.banner-section div.container div#cta-wrapper ul li a {
+            margin:0.25em;
+            font-size:1.1em;
+            font-weight:bold;
+            color:#063;
+            text-align:center;
+        }
+
+    /* Desktop */
+        @media only screen and (min-width: 768px) {
+
+            div.banner-section div.container div#cta-wrapper {
+                margin-bottom:1em;
+            }
+
+            div.banner-section div.container div#cta-wrapper ul li {
+                margin:0.5em;
+            }
+
+            div.banner-section div.container div#cta-wrapper ul.items2 li {
+                float:left;
+                width:45%;
+            }
+
+            div.banner-section div.container div#cta-wrapper ul.items3 li {
+                float:left;
+                width:30%;
+            }
+
+            div.banner-section div.container div#cta-wrapper ul.items4 li {
+                float:left;
+                width:22%;
+            }
+
+        }
+/* End Calls-to-Action Section */
+
+/* Site title */
+
 
 
 
@@ -256,24 +401,7 @@ h1.site-title-heading a:hover {text-decoration:none; color:#396;}
 
 
 
-.site-title {
-    margin-bottom: 0;
-    margin-top: 10px;
-}
-.site-title > a {
-    text-decoration: none;
-}
-.site-title > div {
-    height: auto;
-    line-height: 18px;
-}
-.site-title .site-description {
-    color: #999;
-    font-size: 16px;
-}
-.site-title .site-title-heading {
-    margin: 0;
-}
+
 
 
 .widget_calendar .calendar_wrap table {
@@ -447,22 +575,7 @@ img {
 
 
 
-header .site-title {
-    float: left;
-    margin-top: 0.5em;
-    padding-left:5px;
-    color:#fff;
-}
-header .site-title.image-logo .site-description {
-    display: none;
-}
-header .site-title.image-logo .site-title-heading img {
-    /*display: block;*/
-    max-width:250px;
-    vertical-align: baseline;
-    /*margin-left: -8px;*/
-    margin-right:1em;
-}
+
 header .main-header {
     /*padding-top: 50px;*/
     padding-bottom: 50px;
@@ -633,19 +746,19 @@ main#content .container {
     font-size: 18px;
     margin-bottom: 1.2em;
 }
-#content .banner-section .search-heading {
+#content .banner-section .search-header {
     text-align: center;
     margin-bottom: 2em;
 }
-#content .banner-section .search-heading .search-form-wrapper {
+#content .banner-section .search-header .search-form-wrapper {
     max-width: 700px;
     margin: 2em auto;
     position: relative;
 }
-#content .banner-section .search-heading .search-form-wrapper .input-group {
+#content .banner-section .search-header .search-form-wrapper .input-group {
     overflow: hidden;
 }
-#content .banner-section .search-heading .search-form-wrapper .keyword-field {
+#content .banner-section .search-header .search-form-wrapper .keyword-field {
     border: none;
     border-radius: 0;
     background: #fff;
@@ -654,7 +767,7 @@ main#content .container {
     position: relative;
     z-index: 0;
 }
-#content .banner-section .search-heading .search-form-wrapper .category-wrap {
+#content .banner-section .search-header .search-form-wrapper .category-wrap {
     background: #eceff1;
     font-weight: 500;
     position: absolute;
@@ -666,7 +779,7 @@ main#content .container {
     -ms-transform: skew(-30deg, 0deg);
     transform: skew(-30deg, 0deg);
 }
-#content .banner-section .search-heading .search-form-wrapper .category-wrap select {
+#content .banner-section .search-header .search-form-wrapper .category-wrap select {
     -moz-transform: skew(30deg, 0deg);
     -webkit-transform: skew(30deg, 0deg);
     -o-transform: skew(30deg, 0deg);
@@ -681,7 +794,7 @@ main#content .container {
     outline: none !important;
     cursor: pointer;
 }
-#content .banner-section .search-heading .search-form-wrapper .submit-wrap {
+#content .banner-section .search-header .search-form-wrapper .submit-wrap {
     /*background: #15567d;*/
     position: absolute;
     top: 0; bottom: 0; right: -20px;
@@ -692,7 +805,7 @@ main#content .container {
     -ms-transform: skew(-30deg, 0deg);
     transform: skew(-30deg, 0deg);
 }
-#content .banner-section .search-heading .search-form-wrapper .submit-wrap button {
+#content .banner-section .search-header .search-form-wrapper .submit-wrap button {
     -moz-transform: skew(30deg, 0deg);
     -webkit-transform: skew(30deg, 0deg);
     -o-transform: skew(30deg, 0deg);
@@ -2139,10 +2252,6 @@ a.btn-read-on{color:#fff;}
 }
 
 @media screen and (max-width: 767px) {
-    header .site-title {
-        padding-left:0;
-    }
-    header .site-title.image-logo .site-title-heading img{max-width:225px;}
     .site-main {
         float: none;
         width: auto;
@@ -2237,7 +2346,6 @@ a.btn-read-on{color:#fff;}
     footer#site-footer .contact-info{margin-top:20px;}
 }
 @media screen and (max-width: 479px) {
-    header .site-title.image-logo .site-title-heading img{max-width:190px;}
     .filtered-section ul {
         -webkit-column-count: 1;
         -moz-column-count: 1;

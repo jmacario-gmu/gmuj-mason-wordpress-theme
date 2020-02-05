@@ -20,3 +20,8 @@
     #content .banner-section .search-heading .search-form-wrapper .submit-wrap {
         background: #00838f;
     }
+
+/* Calls to Action Header */
+    div.banner-section div.container div#cta-wrapper ul li {
+        border-color:#00838f;
+    }

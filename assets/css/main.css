@@ -2263,4 +2263,14 @@ a.btn-read-on{color:#fff;}
 
 /* Integration with WPFront notification bar */
 div#wpfront-notification-bar-open-button {z-index:10000 !important;}
-/* End integration with WPFront notificaiton bar */
+/* End integration with WPFront notification bar */
+
+/*category archives*/
+.archive-entry-summary{ display: flex; align-items: flex-start; }
+.flex-item{  }
+.flex-item:nth-of-type(1) { flex-grow: 1; min-width: 200px; padding-right: .5rem; }
+.flex-item:nth-of-type(2) { flex-grow: 2; }
+
+@media screen and (max-width:960px) {
+    .archive-entry-summary{ flex-wrap: wrap; }
+}

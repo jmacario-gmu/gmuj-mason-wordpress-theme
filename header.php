@@ -168,18 +168,16 @@ if(session_id() == '')
                     <div class="container wide clearfix">
                         <div class="left-side">
                             <!-- Unit and department -->
-                            <div id="mason-unit-and-department">
-                                <ul class="links">
-                                    <li id="university">
-                                        <a href="https://www2.gmu.edu"><span class="fa fa-chevron-circle-left"></span> George Mason University</a></li>
-                                    <li id="unit">
-                                        <a href="<?php echo get_theme_mod('gmuj_mason_unit_url')?>"><?php echo get_theme_mod('gmuj_mason_unit')?></a>
-                                    </li>
-                                    <li id="department">
-                                        <a href="<?php echo get_theme_mod('gmuj_mason_department_url')?>"><?php echo get_theme_mod('gmuj_mason_department')?></a>
-                                    </li>
-                                </ul>
-                            </div>
+                            <ul id="university-breadcrumbs" class="links">
+                                <li id="university">
+                                    <a href="https://www2.gmu.edu"><span class="fa fa-chevron-circle-left"></span> George Mason University</a></li>
+                                <li id="unit">
+                                    <a href="<?php echo get_theme_mod('gmuj_mason_unit_url')?>"><?php echo get_theme_mod('gmuj_mason_unit')?></a>
+                                </li>
+                                <li id="department">
+                                    <a href="<?php echo get_theme_mod('gmuj_mason_department_url')?>"><?php echo get_theme_mod('gmuj_mason_department')?></a>
+                                </li>
+                            </ul>
                         </div>
                         <div class="right-side">
 
@@ -250,6 +248,7 @@ if(session_id() == '')
                                             // 'depth' => '2',
                                             'theme_location' => 'primary',
                                             'container' => false,
+                                            'menu_id' => 'primary-menu',
                                             'menu_class' => 'navbar-nav mr-auto',
                                             'walker' => new \BootstrapBasic4\BootstrapBasic4WalkerNavMenu()
                                         )

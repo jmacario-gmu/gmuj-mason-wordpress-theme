@@ -1,5 +1,5 @@
 <!-- 'no search results' section -->
-<section class="no-results not-found">
+<section class="search-no-results">
 
 	<header class="intro">
 		<h1 class="entry-title">No Items Found</h1>

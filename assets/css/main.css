@@ -199,21 +199,21 @@ a {
             header .top-header .left-side ul#university-breadcrumbs.links li#unit,
             header .top-header .left-side ul#university-breadcrumbs.links li#department {
                 background: linear-gradient(to right, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 100%);
-                padding-left:1.5em;
+                padding-left:2em;
                 padding-right:1em;
-                -webkit-transform: skewX(-10deg);
-                -moz-transform: skewX(-10deg);
-                -ms-transform: skewX(-10deg);
-                -o-transform: skewX(-10deg);
-                transform: skewX(-10deg);
+                -webkit-transform: skewX(-30deg);
+                -moz-transform: skewX(-30deg);
+                -ms-transform: skewX(-30deg);
+                -o-transform: skewX(-30deg);
+                transform: skewX(-30deg);
             }
             header .top-header .left-side ul#university-breadcrumbs.links li#unit a,
             header .top-header .left-side ul#university-breadcrumbs.links li#department a {
-                -webkit-transform: skewX(10deg);
-                -moz-transform: skewX(10deg);
-                -ms-transform: skewX(10deg);
-                -o-transform: skewX(10deg);
-                transform: skewX(10deg);
+                -webkit-transform: skewX(30deg);
+                -moz-transform: skewX(30deg);
+                -ms-transform: skewX(30deg);
+                -o-transform: skewX(30deg);
+                transform: skewX(30deg);
             }
 
         }
@@ -529,13 +529,13 @@ a {
 
     /* Desktop */
         @media only screen and (min-width: 500px) {
-            
+
             #cta-wrapper {
                 justify-content: space-between;
             }
 
             #cta-wrapper li {
-                width:auto;        
+                width:auto;
             }
 
         }

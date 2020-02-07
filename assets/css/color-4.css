@@ -22,6 +22,6 @@
     }
 
 /* Calls to Action Header */
-    div.banner-section div.container div#cta-wrapper ul li {
-        border-color:#823676;
+    div.banner-section div.container #cta-wrapper li {
+        background-color:#823676;
     }

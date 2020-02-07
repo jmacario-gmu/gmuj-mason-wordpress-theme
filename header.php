@@ -271,9 +271,6 @@ if(session_id() == '')
                             <?php 
                                 switch (get_theme_mod('gmuj_homepage_header_mode')) {
                                     case 'image':
-                                        ?>
-                                        <!--<h1>Single Image</h1>-->
-                                        <?php
                                         break;
                                     case 'rotator':
                                         ?>
@@ -282,18 +279,18 @@ if(session_id() == '')
                                         break;
                                     case 'cta':
                                         ?>
-                                        <div id="cta-wrapper">
-                                            <div id="cta-header">
-                                                <h1><?php echo get_theme_mod('cta_header_title') ?></h1>
-                                                <div class="description"><?php echo wpautop(get_theme_mod('cta_header_description')) ?></div>
-                                            </div>
+                                        <div id="cta-header">
+                                            <h1><?php echo get_theme_mod('cta_header_title') ?></h1>
+                                            <div class="description"><?php echo wpautop(get_theme_mod('cta_header_description')) ?></div>
                                             <?php
                                             wp_nav_menu(
                                                 array(
                                                     // 'depth' => '2',
                                                     'theme_location' => 'calls-to-action',
                                                     'container' => false,
+                                                    'menu_id' => 'cta-wrapper',
                                                     'menu_class' => 'items' . gmuj_get_menu_items_count('calls-to-action'),
+                                                    'link_after' => ' <span class="fa fa-chevron-circle-right"></span>',
                                                     'walker' => new \BootstrapBasic4\BootstrapBasic4WalkerNavMenu()
                                                 )
                                             );

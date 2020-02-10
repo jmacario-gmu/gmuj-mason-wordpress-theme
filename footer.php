@@ -31,7 +31,7 @@
             jQuery(document).bind('keyup', function(e){
                 if(e.which==68) {
                     // "d"
-                    jQuery('div#debug').toggle();
+                    jQuery('#debug').toggle();
                 }
             });                
         </script>

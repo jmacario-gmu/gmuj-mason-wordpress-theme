@@ -40,20 +40,7 @@ if(session_id() == '')
         <?php get_template_part('template-parts/debug'); ?>
 
         <!-- Utility Links -->
-        <?php if (get_theme_mod('gmuj_show_utility_menu')=='1') { ?>
-            <div id="utility-links-bar">
-                <?php
-                wp_nav_menu(
-                    array(
-                        'theme_location' => 'utility',
-                        'menu_id' => 'utility-links',
-                        'walker' => new \BootstrapBasic4\BootstrapBasic4WalkerNavMenu()
-                    )
-                );
-                ?>            
-                <div style="clear:both; height:1px;"></div>
-            </div>
-        <?php } ?>
+        <?php if (get_theme_mod('gmuj_show_utility_menu')=='1') { get_template_part('template-parts/menu','utility'); } ?>
     
         <!-- Mobile navigation -->
         <div id="mobile-nav">

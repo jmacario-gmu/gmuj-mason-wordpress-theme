@@ -77,3 +77,6 @@ function enqueue_date_picker(){
 
 // Enqueue stylesheets related to custom post types and taxonomies
   require get_template_directory() . '/inc/custom-posts-taxonomies.php';
+
+// Custom widgets
+  require get_template_directory() . '/inc/custom-widgets.php';

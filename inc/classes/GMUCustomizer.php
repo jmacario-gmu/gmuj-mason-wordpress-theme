@@ -425,9 +425,9 @@ function gmuj_theme_customizer_register($wp_customize) {
        ) 
     );
 
-  // Setting: gmuj_website_contact
+  // Setting: gmuj_website_contact_technical
     // Setting
-      $wp_customize->add_setting('gmuj_website_contact',
+      $wp_customize->add_setting('gmuj_website_contact_technical',
         array(
           'default' => '',
           'sanitize_callback' => 'sanitize_email'
@@ -438,12 +438,37 @@ function gmuj_theme_customizer_register($wp_customize) {
       $wp_customize->add_control(
         new WP_Customize_Control(
           $wp_customize,
-          'gmuj_website_contact',
+          'gmuj_website_contact_technical',
           array(
             'type'       => 'email',
             'label'      => 'Website Technical Contact (email)',
+            'description' => '<p>Who should be contacted for technical issues/questions?</p>',
             'section'    => 'analytics_meta',
-            'settings'   => 'gmuj_website_contact'
+            'settings'   => 'gmuj_website_contact_technical'
+          )
+        )
+      );
+
+  // Setting: gmuj_website_contact_content
+    // Setting
+      $wp_customize->add_setting('gmuj_website_contact_content',
+        array(
+          'default' => '',
+          'sanitize_callback' => 'sanitize_email'
+          //'validate_callback' => 'is_email'
+        )
+      );
+    // Control
+      $wp_customize->add_control(
+        new WP_Customize_Control(
+          $wp_customize,
+          'gmuj_website_contact_content',
+          array(
+            'type'       => 'email',
+            'label'      => 'Website Content Contact (email)',
+            'description' => '<p>Who should be contacted for content-related issues/questions?</p>',
+            'section'    => 'analytics_meta',
+            'settings'   => 'gmuj_website_contact_content'
           )
         )
       );

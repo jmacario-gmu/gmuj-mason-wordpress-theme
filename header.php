@@ -22,7 +22,8 @@ if(session_id() == '')
         <!-- Theme Customizable Meta Tags -->
             <?php if (get_theme_mod('gmuj_mason_unit')) { echo '<meta name="mason-unit" content="'.get_theme_mod('gmuj_mason_unit').'" />'.PHP_EOL; } ?>
             <?php if (get_theme_mod('gmuj_mason_department')) { echo '<meta name="mason-department" content="'.get_theme_mod('gmuj_mason_department').'" />'.PHP_EOL; } ?>
-            <?php if (get_theme_mod('gmuj_website_contact')) { echo '<meta name="mason-website-technical-contact" content="'.get_theme_mod('gmuj_website_contact').'" />'.PHP_EOL; } ?>
+            <?php if (get_theme_mod('gmuj_website_contact_technical')) { echo '<meta name="mason-website-technical-contact" content="'.get_theme_mod('gmuj_website_contact_technical').'" />'.PHP_EOL; } ?>
+            <?php if (get_theme_mod('gmuj_website_contact_content')) { echo '<meta name="mason-website-content-contact" content="'.get_theme_mod('gmuj_website_contact_content').'" />'.PHP_EOL; } ?>
 
 <!-- Fire the wp_head action -->
 

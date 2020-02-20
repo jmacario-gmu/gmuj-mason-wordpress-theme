@@ -50,12 +50,6 @@ $WidgetHooks = new \BootstrapBasic4\Hooks\WidgetHooks();
 $WidgetHooks->addActionsFilters();
 unset($WidgetHooks);
 
-// Call to actions/filters of theme customizer.
-require get_template_directory() . '/inc/classes/GMUCustomizer.php';
-$customizer = new GMUCustomizer();
-$customizer->addActionsFilters();
-unset($customizer);
-
 // Bootstrap date picker
 add_action( 'admin_enqueue_scripts', 'enqueue_date_picker' );
 function enqueue_date_picker(){
@@ -80,3 +74,6 @@ function enqueue_date_picker(){
 
 // Custom widgets
   require get_template_directory() . '/inc/custom-widgets.php';
+
+// WordPress theme customizer
+  require get_template_directory() . '/inc/custom-customizer.php';

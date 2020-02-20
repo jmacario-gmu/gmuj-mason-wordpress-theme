@@ -1,5 +1,21 @@
 <?php
 
+function gmuj_generate_css_rule($selector, $style_attribute, $attribute_value, $prefix='', $postfix='', $echo=true) {
+  // Generates a CSS rule having an attribute value set based on the $mod_name (theme mod/theme customizer setting) provided
+  $return = '';
+  if (!empty($attribute_value)) {
+     $return = sprintf('%s { %s:%s; }',
+        $selector,
+        $style_attribute,
+        $prefix.$attribute_value.$postfix
+     );
+     if ($echo) {
+        echo $return;
+     }
+  }
+  return $return;
+}
+
 function gmuj_get_menu_items_count($menu_location_slug) {
 
   // Returns number of items in call-to-action menu

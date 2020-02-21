@@ -8,7 +8,7 @@ function gmuj_register_menus(){
     // Register menus
     register_nav_menus(array(
         'primary' => 'Primary Menu',
-        'utility' => 'Utility Menu',
+        'university' => 'University Menu',
         'prominent' => 'Prominent Links Menu',
         'calls-to-action' => 'Calls-to-Action Menu'
     ));

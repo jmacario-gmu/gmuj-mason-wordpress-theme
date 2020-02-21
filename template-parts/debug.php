@@ -29,7 +29,7 @@
             </tr>
             <tr>
                 <td>Show Utility Menu?:</td>
-                <td><?php echo get_theme_mod('gmuj_show_utility_menu') ?></td>
+                <td><?php echo get_theme_mod('gmuj_show_university_menu') ?></td>
             </tr>
 
             <tr>

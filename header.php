@@ -40,8 +40,8 @@ if(session_id() == '')
         <!-- Debug stuff -->
         <?php get_template_part('template-parts/debug'); ?>
 
-        <!-- Utility Links -->
-        <?php if (get_theme_mod('gmuj_show_utility_menu')=='1') { get_template_part('template-parts/menu','utility'); } ?>
+        <!-- University Links -->
+        <?php if (get_theme_mod('gmuj_show_university_menu')=='1') { get_template_part('template-parts/menu','university'); } ?>
     
         <!-- Mobile navigation -->
         <div id="mobile-nav">

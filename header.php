@@ -230,8 +230,7 @@ if(session_id() == '')
                                                     'container' => false,
                                                     'menu_id' => 'cta-wrapper',
                                                     'menu_class' => 'items' . gmuj_get_menu_items_count('calls-to-action'),
-                                                    'link_after' => ' <span class="fa fa-chevron-circle-right"></span>',
-                                                    'walker' => new \BootstrapBasic4\BootstrapBasic4WalkerNavMenu()
+                                                    'link_after' => ' <span class="fa fa-chevron-circle-right"></span>'
                                                 )
                                             );
                                             ?>

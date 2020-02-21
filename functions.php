@@ -45,17 +45,8 @@ $Bsb4Hooks = new \BootstrapBasic4\Hooks\Bsb4Hooks();
 $Bsb4Hooks->addActionsFilters();
 unset($Bsb4Hooks);
 
-// Call to actions/filters of theme hook to hook into WordPress widgets.
-$WidgetHooks = new \BootstrapBasic4\Hooks\WidgetHooks();
-$WidgetHooks->addActionsFilters();
-unset($WidgetHooks);
-
-// Bootstrap date picker
-add_action( 'admin_enqueue_scripts', 'enqueue_date_picker' );
-function enqueue_date_picker(){
-    wp_enqueue_style( 'bootstrap_css1', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.css');
-    wp_enqueue_script( 'bootstrap_js1', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js');
-}
+// Date-picker
+  require get_template_directory() . '/inc/custom-datepicker.php';
 
 // Custom google fonts
   require get_template_directory() . '/inc/custom-fonts.php';
@@ -77,3 +68,7 @@ function enqueue_date_picker(){
 
 // WordPress theme customizer
   require get_template_directory() . '/inc/custom-customizer.php';
+
+// Calendar
+  require get_template_directory() . '/inc/custom-calendar.php';
+

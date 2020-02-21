@@ -1,5 +1,23 @@
 <?php
 
+// Layout
+
+	// Change main content width up to columns available.
+	add_action('template_redirect', 'detectContentWidth');
+
+    function detectContentWidth(){
+
+        global $content_width, $bootstrapbasic4_sidebar_left_size, $bootstrapbasic4_sidebar_right_size;
+
+        if (is_active_sidebar('sidebar-left') && is_active_sidebar('sidebar-right')) {
+            $content_width = 540;
+        } elseif (is_active_sidebar('sidebar-left') || is_active_sidebar('sidebar-right')) {
+            $content_width = 825;
+        }
+
+        $content_width = apply_filters('bootstrap_basic4_content_width', $content_width, $bootstrapbasic4_sidebar_left_size, $bootstrapbasic4_sidebar_right_size);
+    }
+
 // General
 
 	// Modify title separator

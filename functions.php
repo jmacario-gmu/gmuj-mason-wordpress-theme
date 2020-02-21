@@ -36,10 +36,11 @@ $Autoload->register();
 $Autoload->addNamespace('BootstrapBasic4', get_template_directory() . '/inc/classes');
 unset($Autoload);
 
-// Call to actions/filters of the theme to enable features, register sidebars, enqueue scripts and styles.
-$BootstrapBasic4 = new \BootstrapBasic4\BootstrapBasic4();
-$BootstrapBasic4->addActionsFilters();
-unset($BootstrapBasic4);
+// Sidebars/widget areas
+  require get_template_directory() . '/inc/custom-theme.php';
+
+// Sidebars/widget areas
+  require get_template_directory() . '/inc/custom-sidebars.php';
 
 // General display customizations
   require get_template_directory() . '/inc/custom-display.php';

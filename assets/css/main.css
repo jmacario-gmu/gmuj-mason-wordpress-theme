@@ -98,7 +98,7 @@ a {
         header .top-header .right-side .links {
             float: left;
         }
-        header .top-header .right-side .links a.nav-link {
+        header .top-header .right-side .links a {
            padding:0 0.75rem;
         }        
         header .top-header .right-side .search-wrap {

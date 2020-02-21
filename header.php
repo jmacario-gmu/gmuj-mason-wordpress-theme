@@ -129,7 +129,7 @@ if(session_id() == '')
                                     'container' => false,
                                     'menu_id' => 'prominent-links',
                                     'menu_class' => 'links',
-                                    'walker' => new \BootstrapBasic4\BootstrapBasic4WalkerNavMenu()
+                                    'depth' => 1
                                 )
                             );
                             ?>            

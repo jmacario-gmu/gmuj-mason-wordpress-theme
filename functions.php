@@ -36,8 +36,11 @@ $Autoload->register();
 $Autoload->addNamespace('BootstrapBasic4', get_template_directory() . '/inc/classes');
 unset($Autoload);
 
-// Sidebars/widget areas
+// General theme setup
   require get_template_directory() . '/inc/custom-theme.php';
+
+// Menus
+  require get_template_directory() . '/inc/custom-menus.php';
 
 // Sidebars/widget areas
   require get_template_directory() . '/inc/custom-sidebars.php';

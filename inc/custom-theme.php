@@ -52,14 +52,6 @@ function themeSetup(){
     // @link https://codex.wordpress.org/Theme_Markup
     add_theme_support('html5', array('caption', 'comment-form', 'comment-list', 'gallery', 'search-form'));
 
-    // add primary menu
-    register_nav_menus(array(
-        'primary' => 'Primary Menu',
-        'utility' => 'Utility Menu',
-        'prominent' => 'Prominent Links Menu',
-        'calls-to-action' => 'Calls-to-Action Menu'
-    ));
-
     // add post formats support
     add_theme_support('post-formats', array('aside', 'image', 'video', 'quote', 'link'));
 

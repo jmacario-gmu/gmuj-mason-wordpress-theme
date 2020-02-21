@@ -186,10 +186,7 @@ a {
 /* Site title */
 
     header .site-title {
-        float: left;
-        margin-top: 0.5em;
-        padding-left:5px;
-        color:#fff;
+        position: absolute;
     }
     header .site-title h1 a {
         color:white;
@@ -202,34 +199,18 @@ a {
         display:inline;
     }
     header .site-title.image-logo .site-title-heading img {
-        /*display: block;*/
         max-width:250px;
         vertical-align: text-bottom;
-        /*margin-left: -8px;*/
         margin-right:1em;
     }
 
-    .site-title {
-        margin-bottom: 0;
-        margin-top: 10px;
-    }
-    .site-title > a {
+    .site-title a {
         text-decoration: none;
     }
     .site-title > div {
         height: auto;
         line-height: 18px;
     }
-    .site-title .site-description {
-        color: #999;
-        font-size: 16px;
-    }
-    .site-title .site-title-heading {
-        margin: 0;
-    }
-
-    h1.site-title-heading a:hover {text-decoration:none; color:#396;}
-
 
     @media screen and (max-width: 767px) {
         header .site-title {

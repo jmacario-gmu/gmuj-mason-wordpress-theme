@@ -17,11 +17,12 @@ if (!isset($bootstrapbasic4_sidebar_right_size)) {
 // Once you specified left and right column size, while widget was activated in all or some sidebar the main column size will be calculate automatically from these size and widgets activated.
 // For example: you use only left sidebar (widgets activated) and left sidebar size is 4, the main column size will be 12 - 4 = 8.
 //
-// Title separator. Please note that this value maybe able overriden by other plugins.
-if (!isset($bootstrapbasic4_title_separator)) {
-    $bootstrapbasic4_title_separator = '|';
-}
 
+// Set configuration settings
+  // Title separator
+  $config_title_separator = '|';
+  // 'Read more' link text
+  $config_read_more_link_text = '(READ MORE...)';
 
 // Include files
 require get_template_directory() . '/inc/classes/Autoload.php';
@@ -40,10 +41,8 @@ $BootstrapBasic4 = new \BootstrapBasic4\BootstrapBasic4();
 $BootstrapBasic4->addActionsFilters();
 unset($BootstrapBasic4);
 
-// Call to actions/filters of theme hook to hook into WordPress and make changes to the theme.
-$Bsb4Hooks = new \BootstrapBasic4\Hooks\Bsb4Hooks();
-$Bsb4Hooks->addActionsFilters();
-unset($Bsb4Hooks);
+// General display customizations
+  require get_template_directory() . '/inc/custom-display.php';
 
 // Date-picker
   require get_template_directory() . '/inc/custom-datepicker.php';

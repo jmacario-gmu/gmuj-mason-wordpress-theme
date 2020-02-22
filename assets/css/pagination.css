@@ -1,0 +1,15 @@
+.pagination {
+    margin: 0;
+}
+.pagination-center {
+    text-align: center;
+}
+.pagination-row {
+    margin-bottom: 20px;
+}
+
+.posts-pagination{margin-top:20px;}
+.posts-pagination .page-numbers,.posts-pagination .page-numbers:hover,.posts-pagination .page-numbers:link{display: inline-block;
+    font-size:16px;background:#d77137;padding:5px 15px;transition: all .4s;margin-right:5px;color:#fff;text-decoration:none;}
+.posts-pagination a.page-numbers:hover{opacity:0.8;}
+.posts-pagination .page-numbers.current,.posts-pagination .page-numbers.current:hover{background:#e5c4b1;}

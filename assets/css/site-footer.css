@@ -1,0 +1,48 @@
+.site-footer {
+    color: #fff;
+}
+.site-footer .container {
+    position: relative;
+}
+.site-footer .section {
+    padding: 50px 0;
+    position: relative;
+    overflow: hidden;
+}
+.site-footer .section:before {
+    content: '';
+    position: absolute;
+    width: 50%; height: 100%;
+    display: block;
+    background: #fff;
+    opacity: .02;
+    -moz-transform: skew(-30deg, 0deg);
+    -webkit-transform: skew(-30deg, 0deg);
+    -o-transform: skew(-30deg, 0deg);
+    -ms-transform: skew(-30deg, 0deg);
+    transform: skew(-30deg, 0deg);
+    transition: all .4s;
+}
+.site-footer .footer1 {
+    background: #4c4c4c;
+    /*background: #006633;*/
+}
+.site-footer .footer1:before {
+    right: 70%;
+    top: 60%;
+}
+.site-footer .footer2 {
+    background: #086945;
+}
+.site-footer .footer2:before {
+    left: 50%;
+    top: 0;
+}
+.site-footer h3.widget-title {
+    font-size: 18px;
+    margin-bottom: 2.5em;
+    color: inherit;
+}
+.site-footer a, .site-footer a:hover {
+    color: inherit;
+}

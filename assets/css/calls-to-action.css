@@ -1,0 +1,41 @@
+/* Calls-to-Action Section */
+
+    /* Default (mobile) */
+
+        #cta-wrapper {
+            display:flex;
+            flex-wrap: wrap;
+            margin:0;
+            padding:0;
+            list-style-type:none;
+        }
+
+        #cta-wrapper li {
+            width:85%;
+            margin: 0 auto 1em;
+            padding:2em 3em 0.25em 0.5em;
+        }
+
+        #cta-wrapper li a {
+            text-decoration:none;
+            font-size:1.3em;
+            font-weight:bold;
+            color:#fff;
+        }
+
+        #cta-wrapper li a span {
+            font-size:0.8em;
+        }
+
+    /* Desktop */
+        @media only screen and (min-width: 500px) {
+
+            #cta-wrapper {
+                justify-content: space-between;
+            }
+
+            #cta-wrapper li {
+                width:auto;
+            }
+
+        }

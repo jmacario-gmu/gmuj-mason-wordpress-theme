@@ -117,3 +117,26 @@
 .slick-arrow.slick-hidden {
     display: none;
 }
+
+.slick-dots {
+    padding: 0;
+    position: relative;
+}
+.slick-dots li {
+    display: inline-block;
+}
+.slick-dots li button {
+    padding: 0;
+    border: none;
+    background: #006633;
+    text-indent: -99em;
+    overflow: hidden;
+    text-align: left;
+    border-radius: 50%;
+    width: 11px; height: 11px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.slick-dots li.slick-active button {
+    background: #d77e4a;
+}
